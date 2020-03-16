@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WalletConnect</string>
+    <string name="scan.btn.album">从相册选取</string>
+    <string name="scan.txt.tip">请对准二维码</string>
+</resources>

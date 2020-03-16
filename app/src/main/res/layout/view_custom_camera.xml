@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <!--请对准二维码-->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/gray_light"
+        android:text="@string/scan.txt.tip"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewfinder_view_rim"/>
+
+    <com.zero.walletconnect.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:inner_width="240dp"
+        app:inner_height="240dp"
+        app:inner_corner_color="@color/theme_active"
+        app:inner_corner_length="0dp"
+        app:inner_corner_width="0dp"
+        app:inner_scan_bitmap="@drawable/scan_light"
+        app:inner_scan_speed="12"
+        app:inner_scan_iscircle="true"
+        app:inner_corner_round="5dp"
+        app:inner_scan_rim_bitmap="@drawable/bg_scan"
+        />
+
+    <TextView
+        android:id="@+id/viewfinder_view_rim"
+        android:layout_width="241dp"
+        android:layout_height="241dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/viewfinder_view"
+        app:layout_constraintLeft_toLeftOf="@+id/viewfinder_view"
+        app:layout_constraintRight_toRightOf="@+id/viewfinder_view"
+        app:layout_constraintBottom_toBottomOf="@+id/viewfinder_view"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

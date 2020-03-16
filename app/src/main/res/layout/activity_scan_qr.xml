@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_alpha40">
+    <include layout="@layout/include_base_line"/>
+    <!--相机与扫码-->
+    <FrameLayout
+        android:id="@+id/scan_qr_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+    <!--返回按钮-->
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="6dp"
+        android:paddingTop="6dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_back_light"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!--从相册选取-->
+    <TextView
+        android:id="@+id/scan_qr_select_from_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray_light"
+        android:text="@string/scan.btn.album"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintRight_toLeftOf="@+id/line_right"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

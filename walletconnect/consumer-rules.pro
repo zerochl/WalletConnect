@@ -1,0 +1,2 @@
+-keep class com.zero.walletconnect.walletconnect**{*;}
+-dontwarn com.zero.walletconnect.walletconnect**

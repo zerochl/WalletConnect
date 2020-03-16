@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: "$project.rootDir/tools/versions_configuration.gradle"
+android {
+    compileSdkVersion getProject().compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion getProject().minSdkVersion
+        targetSdkVersion getProject().targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+
+        pre {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+
+        atest {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+
+        debug {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$sdk.kotlin"
+
+//    implementation "org.java-websocket:Java-WebSocket:$libVersions.websocket"
+
+    implementation "com.github.komputing:khex:$libVersions.komputing.khex"
+
+    implementation "org.bouncycastle:bcprov-jdk15on:$libVersions.bcprov"
+
+    implementation "com.squareup.moshi:moshi:$libVersions.moshi"
+    implementation "com.squareup.okhttp3:okhttp:$libVersions.okhttp3.okhttp"
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

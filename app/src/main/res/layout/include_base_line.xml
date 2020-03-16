@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--页面左边基线-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0444" />
+    <!--页面右边基线-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556" />
+    <!--页面顶部基线-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0" />
+</merge>

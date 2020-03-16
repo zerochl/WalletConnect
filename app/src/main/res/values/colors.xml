@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!--black-->
+    <color name="black_alpha10">#11000000</color>
+    <color name="black_alpha16">#18000000</color>
+    <color name="black_alpha30">#41000000</color>
+    <color name="black_alpha40">#59000000</color>
+    <!--Scan-->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="gray_light">#EEEEF1</color>
+
+
+    <color name="theme_active">#51C3B0</color>
+    <color name="theme_active_alpha50">#7751C3B0</color>
+    <color name="theme_active_alpha32">#4151C3B0</color>
+    <color name="theme_active_alpha24">#2b51C3B0</color>
+    <color name="theme_active_alpha20">#2251C3B0</color>
+    <color name="theme_active_alpha10">#1151C3B0</color>
+    <color name="theme_active_alpha5">#0851C3B0</color>
+</resources>
